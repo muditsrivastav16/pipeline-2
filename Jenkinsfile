@@ -1,6 +1,14 @@
 pipeline {
   environment {
-    CC = 'clang'
+    CC = """${bat(
+      returnStdout: true,
+      script : 'echo "clang"'
+    )}"""
+    
+    EXIT_STATUS = """${bat(
+      returnStatus: true,
+      script: 'exit 1'
+    )}"""
   }
   agent any
   stages {

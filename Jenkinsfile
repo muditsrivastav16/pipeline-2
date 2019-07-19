@@ -11,7 +11,7 @@ pipeline {
       steps {
         echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
         
-        bat 'printenv'
+        bat 'set'
       }
     }
   }

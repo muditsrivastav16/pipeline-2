@@ -8,7 +8,7 @@ pipeline {
       steps {
         echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
         
-        bat echo "name is ${foo}"
+        echo "name is ${foo}"
       }
     }
   }

@@ -30,9 +30,6 @@ pipeline {
         echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
         
         bat 'set'
-      }
-      
-      steps {
         echo "${params.name}"
         echo "${params.text}"
         echo "${params.toggle}"
